@@ -1,0 +1,19 @@
+{
+	"name": "ds_test",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "class10Student.txt",
+				"folderPath": "srcdirpj",
+				"container": "containerpj"
+			}
+		}
+	}
+}
