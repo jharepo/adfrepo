@@ -1,0 +1,27 @@
+{
+	"name": "ds_tgt_param_txt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_foldername": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@concat('tgtdirpj','/',dataset().p_foldername)",
+					"type": "Expression"
+				},
+				"container": "containerpj"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
